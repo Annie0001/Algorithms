@@ -10,6 +10,8 @@
 #      Define an .__init__() method for the LinkedList. We want to be able to instantiate a LinkedList with a head node, so .__init__() should take value as an argument. 
 #      Make sure value defaults to None if no value is provided.
 #      Inside the .__init__() method, set self.head_node equal to a new Node with value as its value.
+#   2. Define a .get_head_node() method that helps us peek at the first node in the list.
+#      Inside the method, return the head node of the linked list.
 
 class Node:
     def __init__(self, value, next_node=None):
@@ -30,3 +32,8 @@ class Node:
 class LinkedList:
     def __init__(self,value=None):
         self.head_node = Node(value)
+
+# Part-2
+def get_head_node(self):
+    return self.head_node
+
