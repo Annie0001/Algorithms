@@ -1,3 +1,27 @@
+# Consider the following list: a -> b -> c
+# If node b is removed from the list, the new list should be: a -> c
+# We need to update the link within the a node to match what b was pointing to prior to removing it from the linked list.
+# Lucky for us, in Python, nodes which are not referenced will be removed for us automatically. If we take care of the references, 
+# b will be “removed” for us in a process called Garbage Collection.
+# For the purposes of this lesson, we’ll create a function that removes the first node that contains a particular value. However, you could also build this function to remove nodes by index or remove all nodes that contain a particular value.
+# 
+#       Part - 1
+#       At the bottom of script.py, add a .remove_node() method to LinkedList. It should take value_to_remove as a parameter. We’ll be looking for a node with this value to remove.
+#       In the body of .remove_node(), set a new variable current_node equal to the head_node of the list.
+#       We’ll use current_node to keep track of the node we are currently looking at as we traverse the list.
+#
+#       Part - 2
+#       Still inside the method body, use an if statement to check whether the list’s head_node has a value that is the same as value_to_remove.
+#       If it does, we’ve found the node we’re looking for and we need to adjust the list’s pointer to head_node.
+#       Inside the if clause, set self.head_node equal to the second node in the linked list.
+#
+#       Part -  3
+#       Add an else clause. Within the else clause:
+#       Traverse the list until current_node.get_next_node().get_value() is the value_to_remove.
+#       (Just like with stringify_list you can traverse the list using a while loop that checks whether current_node exists.)
+#       When value_to_remove is found, adjust the links in the list so that current_node is linked to next_node.get_next_node().
+#       After you remove the node with a value of value_to_remove, make sure to set current_node to None so that you exit the loop.
+
 # We'll be using our Node class
 class Node:
     def __init__(self, value, next_node=None):
