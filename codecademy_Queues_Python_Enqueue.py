@@ -9,6 +9,13 @@
 #       If it does, instantiate a Node that takes value as its argument and assign it to a new variable item_to_add
 #       Print “Adding “ + str(item_to_add.get_value()) + “ to the queue!” 
 
+#   2--Also inside the if statement, do the following:
+#   Check if the queue is empty — if so, set both the instance’s head and tail to the item_to_add
+#   Otherwise, use Node‘s set_next_node() method to:
+#   set item_to_add as the current tail‘s next node
+#   set tail equal to item_to_add
+#   Increment the queue’s size by 1
+
 from node import Node
 
 class Queue:
@@ -23,6 +30,17 @@ def enqueue(self, value):
     if self.has_space():
         item_to_add = Node (value)
         print("Adding " + str(item_to_add.get_value())+" to the queue!")
+
+        # Part 2 Code Here
+        if self.is_empty():
+            self.head = item_to_add
+            self.tail = item_to_add
+        else:
+            self.tail.set_next_node(item_to_add)
+            self.tail = item_to_add
+        self.size += 1
+    else:
+        print("Sorry it does. not have space!")
 
 def peek(self):
     if self.is_empty():
