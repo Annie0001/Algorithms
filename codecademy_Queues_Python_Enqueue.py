@@ -7,7 +7,7 @@
 #   1--Inside the Queue class you built, define a method enqueue() that takes a node value value as a parameter.
 #       Add an if clause to check if the queue has space
 #       If it does, instantiate a Node that takes value as its argument and assign it to a new variable item_to_add
-#       Print “Adding “ + str(item_to_add.get_value()) + “ to the queue!”
+#       Print “Adding “ + str(item_to_add.get_value()) + “ to the queue!” 
 
 from node import Node
 
