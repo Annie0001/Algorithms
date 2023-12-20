@@ -16,6 +16,8 @@
 #   set tail equal to item_to_add
 #   Increment the queue’s size by 1
 
+#   3--After the outermost if statement, create an else statement. Within it, print out “Sorry, no more room!”
+
 from node import Node
 
 class Queue:
@@ -40,7 +42,7 @@ def enqueue(self, value):
             self.tail = item_to_add
         self.size += 1
     else:
-        print("Sorry it does. not have space!")
+        print("Sorry, no more room!")
 
 def peek(self):
     if self.is_empty():
