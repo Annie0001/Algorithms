@@ -16,7 +16,7 @@ class Bird:
 
 
 
-#2nd use case. accessing attribute with instance name
+# #2nd use case. accessing attribute with instance name
 parakeet = Bird()
 parrot = Bird()
 
