@@ -13,3 +13,31 @@
 # Inside the Employee class:
 # Define a say_id() method
 # Inside say_id(), output the string "My id is " and then the instance id.
+
+# 4-  Lastly, create 2 employees and have them give their ids.
+# Outside of the Employee class:
+# Define the variable e1 and set it to an instance of Employee
+# Define the variable e2 and set it to an instance of Employee
+# Have both e1 and e2 output their ids
+
+# Write your code below
+class Employee:
+    new_id = 1
+    def __init__(self):
+        self.id = Employee.new_id
+        Employee.new_id += 1
+
+    def say_id(self):
+        print(f"My Id is {self.id}")
+
+employee_id_1 = Employee()
+employee_id_2 = Employee()
+
+employee_id_1.say_id()
+employee_id_2.say_id()
+
+e1 = Employee()
+e2 = Employee()
+
+e1.say_id()
+e2.say_id()
