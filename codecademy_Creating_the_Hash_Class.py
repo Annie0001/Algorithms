@@ -41,3 +41,22 @@ class HashMap:
 
     def compressor(self,hash_code):
         return hash_code % self.array_size
+    
+######  Defining the Setter ###########
+# A data structure that is unable to contain data is a sad sight indeed.
+# We need to put together all the other steps we’ve taken: plug the key into the hash function, 
+# plug the hash code into the compression function, use the array index to find the place in the array, 
+# and finally set the value of the array to the value we want.
+
+#   11- Create a .assign() method for the hash map.
+#       It should take three parameters: self, key, and value.
+#   12- Save the value (just the value for now) to the map’s array 
+#       at the index determined by plugging the key into the .hash() method 
+#       and plugging the hash code into the .compressor() method.
+
+    def assign(self,key,value):
+        #pass
+        array_index = self.compressor(self.hash(key))
+        self.array[array_index] = value
+
+
