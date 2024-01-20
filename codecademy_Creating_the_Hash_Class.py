@@ -73,3 +73,12 @@ class HashMap:
     #pass
         array_index = self.compressor(self.hash(key))
         return self.array[array_index]
+
+####### Creating an Instance ######
+#   16- Create a new hash map called hash_map. Give it an array size of 20.
+#   17- In hash_map save the value "metamorphic" for the key "gneiss".
+#   18- Now retrieve the value of hash_map for the key gneiss. Print it out, does your HashMap work as expected?
+
+hash_map = HashMap(20)
+hash_map.assign('gneiss', 'metamorphic')
+print(hash_map.retrieve('gneiss'))
