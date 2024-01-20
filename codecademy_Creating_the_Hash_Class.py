@@ -60,3 +60,16 @@ class HashMap:
         self.array[array_index] = value
 
 
+####### Defining the Getter ######
+# There is a natural expectation after placing an item into a bag 
+# that we will later be able to remove the item from that bag. Otherwise we have created a hole. 
+# Let’s implement retrieval for our hash map.
+
+#  13-  Define a .retrieve()method for HashMap. It should take two parameters: self and key.
+#  14-  .retrieve() should calculate the array index in the same way our .assign() does and then retrieve the value at that index.
+#  15-  Return that value.
+
+    def retrieve(self, key):
+    #pass
+        array_index = self.compressor(self.hash(key))
+        return self.array[array_index]
