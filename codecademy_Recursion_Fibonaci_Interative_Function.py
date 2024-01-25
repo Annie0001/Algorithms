@@ -4,6 +4,7 @@ def fibonacci(n):
     fiblist = [0, 1]
     for i in range(2,n+1):
         fiblist.append(fiblist[i-1] + fiblist[i-2])
-    return fiblist[n]
+    return fiblist
 
-print(fibonacci(3))
+
+print(fibonacci(5))
