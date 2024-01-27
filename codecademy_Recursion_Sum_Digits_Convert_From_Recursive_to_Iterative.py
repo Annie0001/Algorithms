@@ -11,8 +11,8 @@ def sum_digits(n):
         return n
     results = 0
     while n > 9:
-        result += n % 10
+        results += n % 10
         n = n // 10
-    return result + n
+    return results + n
 
 print(sum_digits(12))
