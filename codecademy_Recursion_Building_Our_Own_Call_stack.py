@@ -13,6 +13,11 @@
 # Decrement n after its value has been stored.
 # End the loop by printing call_stack.
 
+# 3. After the while loop concludes, we’ve reached our “base case”, where n == 1.
+# At this point we haven’t summed any values, but we have all the information we’ll need stored in our call_stack.
+# In the next exercise, we’ll handle the summation of values from the execution contexts captured in call_stack.
+# For now, print out “BASE CASE REACHED” outside of the loop block before our multiple return statement.
+
 def sum_to_one(n):
     result = 1
     call_stack = []
